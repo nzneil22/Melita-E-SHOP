@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: melita-e-shop
+    profiles:
+        active: default
+    config:
+        import: configserver:http://localhost:8888
+        use-legacy-processing: true
+    cloud:
+        bootstrap:
+            enabled: true

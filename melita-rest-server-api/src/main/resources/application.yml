@@ -1,0 +1,36 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  cache:
+    type: redis
+
+  redis:
+    host: localhost
+    port: 6379
+    password: guest
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/e_shop?useSSL=false
+    username: root
+    password: root
+
+  cloud:
+    stream:
+      bindings:
+        crmQueue:
+          destination: customers
+      default:
+        contentType: application/json
+
+
+server:
+  port: 9095
